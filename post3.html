@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Deploy Websites on GitHub Pages | IamZurfishan Blog</title>
+  <meta
+    name="description"
+    content="Step-by-step guide to deploy your static websites for free on GitHub Pages - perfect for students and beginners."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">✦ IamZurfishan.dev</a>
+    </div>
+  </header>
+
+  <main class="article-main">
+    <div class="article-wrap">
+      <a href="index.html#articles" class="back-link">← Back to all posts</a>
+
+      <header class="article-header">
+        <span class="badge badge-launch">🚀 Deployment Guide</span>
+        <h1>How to Deploy Websites on GitHub Pages</h1>
+        <p class="article-meta">By IamZurfishan • 20 Apr 2026 • 12 min read</p>
+        <p class="article-intro">
+          Want to share your website with the world for FREE? GitHub Pages is the answer! 
+          In this complete guide, I'll walk you through every step to deploy your static websites 
+          and get a live URL like https://iamZurfishan.github.io.
+        </p>
+      </header>
+
+      <article class="article-content">
+        <h2>🎯 What is GitHub Pages?</h2>
+        <p>
+          GitHub Pages is a free hosting service that turns your GitHub repository into a live website. 
+          It's perfect for:
+        </p>
+        <ul>
+          <li>Student portfolios and lab projects</li>
+          <li>Personal blogs and resumes</li>
+          <li>Open source project documentation</li>
+          <li>Testing and sharing your work with anyone</li>
+        </ul>
+
+        <div class="tip-box">
+          <span class="tip-icon">💰 Best Part</span>
+          <p>It's 100% FREE! No hosting costs, no server setup, no credit card required. Just your code on GitHub.</p>
+        </div>
+
+        <h2>📋 Prerequisites (What You Need)</h2>
+        <ul>
+          <li>A <strong>GitHub account</strong> (sign up at github.com if you don't have one)</li>
+          <li>Your website files (HTML, CSS, JS) ready on your computer</li>
+          <li>Basic knowledge of Git commands (or GitHub Desktop app)</li>
+          <li>Internet connection (obviously!)</li>
+        </ul>
+
+        <h2>🚀 Method 1: Deploy with GitHub Website (Easiest for Beginners)</h2>
+
+        <h3>Step 1: Create a New Repository</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>📦 Creating Repository on GitHub</span>
+            <button class="copy-btn" type="button">📋 Copy Steps</button>
+          </div>
+          <pre><code>1. Log into your GitHub account
+2. Click the "+" icon in top-right corner → "New repository"
+3. Repository name: <strong>your-username.github.io</strong>
+   (Example: iamZurfishan.github.io)
+4. Make it PUBLIC (required for free hosting)
+5. Check "Add a README file" (optional)
+6. Click "Create repository"</code></pre>
+        </div>
+
+        <div class="success-box">
+          <span class="success-icon">⭐</span>
+          <p><strong>Important!</strong> The repository name MUST be exactly: <code>username.github.io</code> (replace "username" with your actual GitHub username). This creates your main site at that URL.</p>
+        </div>
+
+        <h3>Step 2: Upload Your Website Files</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>📤 Uploading Files</span>
+            <button class="copy-btn" type="button">📋 Copy Steps</button>
+          </div>
+          <pre><code>1. In your new repository, click "Add file" → "Upload files"
+2. Drag and drop ALL your website files:
+   - index.html (MUST have this!)
+   - style.css
+   - script.js
+   - post1.html, post2.html, post3.html
+   - images folder (if any)
+3. Add a commit message: "Initial website upload"
+4. Click "Commit changes"</code></pre>
+        </div>
+
+        <h3>Step 3: Enable GitHub Pages</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>⚙️ Activate Pages</span>
+            <button class="copy-btn" type="button">📋 Copy Steps</button>
+          </div>
+          <pre><code>1. Go to your repository's "Settings" tab
+2. Scroll down to "GitHub Pages" section (or click "Pages" in left sidebar)
+3. Under "Branch", select "main" (or "master")
+4. Click "Save"
+5. Wait 1-2 minutes for deployment
+6. Your site will be live at: https://yourusername.github.io</code></pre>
+        </div>
+
+        <div class="tip-box">
+          <span class="tip-icon">🕐 Deployment Time</span>
+          <p>It usually takes 1-3 minutes for your site to go live after enabling Pages. Refresh the page and you'll see the green checkmark with your URL!</p>
+        </div>
+
+        <h2>💻 Method 2: Deploy with Git Commands (Professional Way)</h2>
+        
+        <h3>Step 1: Initialize Git Locally</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🖥️ Terminal Commands</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># Navigate to your project folder</span>
+cd path/to/your-website-folder
+
+<span class="token-comment"># Initialize Git repository</span>
+git init
+
+<span class="token-comment"># Add all files</span>
+git add .
+
+<span class="token-comment"># Make first commit</span>
+git commit -m "Initial commit - My awesome website"</code></pre>
+        </div>
+
+        <h3>Step 2: Connect to GitHub Remote</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔗 Link Local to Remote</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># Add remote origin (replace with your repo URL)</span>
+git remote add origin https://github.com/IamZurfishan/IamZurfishan.github.io.git
+
+<span class="token-comment"># Push to GitHub</span>
+git branch -M main
+git push -u origin main</code></pre>
+        </div>
+
+        <h3>Step 3: Enable Pages (Same as Method 1, Step 3)</h3>
+
+        <h2>🔄 Updating Your Live Website</h2>
+        <p>When you make changes to your website, here's how to update it:</p>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔄 Push Updates</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># After making changes to your files</span>
+git add .
+git commit -m "Update: Describe your changes here"
+git push
+
+<span class="token-comment"># OR using GitHub website:</span>
+<span class="token-comment"># Just upload the updated files again - it will replace them automatically</span></code></pre>
+        </div>
+
+        <div class="success-box">
+          <span class="success-icon">⚡</span>
+          <p><strong>Pro Tip:</strong> Changes usually appear within 1-2 minutes. If you don't see them, do a hard refresh (Ctrl+Shift+R or Cmd+Shift+R) to clear your browser cache.</p>
+        </div>
+
+        <h2>📁 Custom Domain (Optional - Use Your Own URL)</h2>
+        <p>Want your site at www.yourname.com instead of username.github.io? Here's how:</p>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>🌐 Custom Domain Setup</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># Step 1: Buy a domain from Namecheap, GoDaddy, Google Domains, etc.</span>
+
+<span class="token-comment"># Step 2: Add CNAME file to your repository</span>
+<span class="token-comment"># Create a file named "CNAME" (no extension)</span>
+<span class="token-comment"># Inside, write: www.yourdomain.com</span>
+
+<span class="token-comment"># Step 3: In GitHub Pages settings, enter your custom domain</span>
+
+<span class="token-comment"># Step 4: Configure DNS settings at your domain provider:</span>
+<span class="token-comment"># - Add A records pointing to GitHub's IP addresses</span>
+<span class="token-comment"># - Or add CNAME record pointing to username.github.io</span></code></pre>
+        </div>
+
+        <h2>🐛 Common Deployment Issues & Fixes</h2>
+
+        <h3>❌ Issue 1: "404 Page Not Found"</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔧 Solution</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code>✅ Make sure you have an index.html file in the root folder
+✅ Check that you're using the correct URL (username.github.io)
+✅ Wait 2-3 minutes after enabling Pages
+✅ Check if branch is set correctly (main or master)</code></pre>
+        </div>
+
+        <h3>❌ Issue 2: CSS/JS Not Loading</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔧 Solution</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code>✅ Check file paths - use relative paths, not absolute
+   ❌ Wrong: href="/style.css"
+   ✅ Correct: href="style.css"
+✅ Make sure all file names match exactly (case-sensitive!)
+✅ Check browser console for 404 errors</code></pre>
+        </div>
+
+        <h3>❌ Issue 3: Images Not Showing</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔧 Solution</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code>✅ Check image paths: src="images/photo.jpg"
+✅ Make sure images are uploaded to the repository
+✅ Use supported formats: .jpg, .png, .gif, .svg, .webp
+✅ Check for typos in file names</code></pre>
+        </div>
+
+        <h3>❌ Issue 4: My Site Shows Old Content</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span>🔧 Solution</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code>✅ Clear your browser cache (Ctrl+Shift+Delete)
+✅ Do a hard refresh (Ctrl+Shift+R / Cmd+Shift+R)
+✅ Check GitHub repository - files should show recent commit
+✅ Wait up to 10 minutes (sometimes GitHub takes longer)</code></pre>
+        </div>
+
+        <h2>🎯 Project Page vs User/Organization Page</h2>
+        <p>GitHub Pages offers two types of sites:</p>
+
+        <div class="code-block">
+          <div class="code-header">
+            <span>📖 Two Types of Pages</span>
+            <button class="copy-btn" type="button">📋 Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># 1. USER SITE (One per account)</span>
+Repository name: username.github.io
+URL: https://username.github.io
+Use for: Main portfolio, personal website
+
+<span class="token-comment"># 2. PROJECT SITE (Unlimited)</span>
+Repository name: any-name (e.g., my-blog)
+URL: https://username.github.io/repository-name
+Use for: Individual projects, documentation, demos</code></pre>
+        </div>
+
+        <div class="tip-box">
+          <span class="tip-icon">💡 My Recommendation</span>
+          <p>Create a <strong>username.github.io</strong> repository for your main portfolio, then use project sites for individual lab assignments. Both are free!</p>
+        </div>
+
+        <h2>📊 Complete Deployment Checklist</h2>
+        <ul>
+          <li>✅ Create GitHub account</li>
+          <li>✅ Create repository (username.github.io for main site)</li>
+          <li>✅ Upload all website files (must include index.html)</li>
+          <li>✅ Go to Settings → Pages</li>
+          <li>✅ Select branch: main (or master)</li>
+          <li>✅ Click Save</li>
+          <li>✅ Wait 1-3 minutes</li>
+          <li>✅ Visit your live URL</li>
+          <li>✅ Share with friends and professors!</li>
+        </ul>
+
+        <div class="success-box">
+          <span class="success-icon">🎉</span>
+          <p><strong>Congratulations!</strong> Your website is now live on the internet. Anyone with the link can see your work. This is perfect for sharing lab projects, your portfolio, or just showing off your skills!</p>
+        </div>
+
+        <h2>🔗 Quick Reference Links</h2>
+        <ul>
+          <li><strong>GitHub Sign Up:</strong> https://github.com/join</li>
+          <li><strong>GitHub Pages Docs:</strong> https://pages.github.com</li>
+          <li><strong>Your Live Site:</strong> https://[your-username].github.io</li>
+          <li><strong>GitHub Desktop (App):</strong> https://desktop.github.com</li>
+        </ul>
+
+        <h2>🏆 What's Next After Deployment?</h2>
+        <ul>
+          <li>Add a custom domain (www.yourname.com)</li>
+          <li>Set up GitHub Actions for automatic deployment</li>
+          <li>Add a Jekyll theme for blogging</li>
+          <li>Connect Google Analytics to track visitors</li>
+          <li>Add social media meta tags for better sharing</li>
+        </ul>
+
+        <p>
+          Deploying on GitHub Pages was a game-changer for me. I can now share every project I build 
+          with my professors, friends, and potential employers. The best part? It's completely free 
+          and super easy once you know the steps. Try it with your next project!
+        </p>
+      </article>
+
+      <section class="related-posts">
+        <h3>📚 Related Posts</h3>
+        <div class="related-links">
+          <a href="post1.html">🎨 Mastering CSS Grid & Flexbox: A Beginner's Journey</a>
+          <a href="post2.html">🐙 Git & GitHub: Complete Beginner's Guide to Push, Pull & More</a>
+        </div>
+      </section>
+
+      <div class="share-section">
+        <p>🚀 Found this deployment guide helpful? Share it!</p>
+        <div class="share-buttons">
+          <a href="#" class="share-btn">🐙 GitHub</a>
+          <a href="#" class="share-btn">🐦 Twitter</a>
+          <a href="#" class="share-btn">💼 LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 IamZurfishan's Creative Journal | Learning in Public</p>
+      <div class="social-links">
+        <a href="https://github.com/iamZurfishan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
